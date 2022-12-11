@@ -43,7 +43,6 @@ body {
 }
 .nav-flex-box {
   display: flex;
-  justify-content: space-between;
   padding-top: 24px;
   padding-bottom: 25px;
 }
@@ -89,21 +88,36 @@ body {
 
 .menu-contacts {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   padding: 0px;
   margin: 0px;
-  margin-left: 371px;
+  margin-left: 345px;
 }
 
 .menu-contacts a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
   font-weight: 500;
   color: #757575;
+  cursor: pointer;
 }
 
 .menu-contacts-item {
-  margin-right: 50px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  
 }
+.menu-contacts-item svg {
+  margin-right: 10px;
+}
+
+.menu-contacts-item p {
+  margin: 0px;
+}
+
 .menu-contacts-item:last-child {
   margin-right: 0px;
 }
@@ -111,6 +125,9 @@ body {
 .menu-contacts a:hover,
 .menu-contacts a:focus {
   color: #2196f3;
+  stroke: #2196f3ff;
+  fill: #2196f3ff;
+  stroke-width: 1px;
 }
 
 /* footer */
