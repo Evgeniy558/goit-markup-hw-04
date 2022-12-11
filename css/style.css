@@ -88,7 +88,6 @@ body {
 
 .menu-contacts {
   display: flex;
-  /* align-items: center; */
   padding: 0px;
   margin: 0px;
   margin-left: 345px;
@@ -108,7 +107,6 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.02em;
-  
 }
 .menu-contacts-item svg {
   margin-right: 10px;
@@ -125,9 +123,7 @@ body {
 .menu-contacts a:hover,
 .menu-contacts a:focus {
   color: #2196f3;
-  stroke: #2196f3ff;
-  fill: #2196f3ff;
-  stroke-width: 1px;
+  --color1: #2196f3;
 }
 
 /* footer */
@@ -135,11 +131,45 @@ body {
   background-color: #2f303a;
 }
 
+.box-footer {
+  display: flex;
+  color: white;
+  font-weight: 700;
+  align-items: flex-start;
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
+}
+.box-footer-social {
+  display: flex;
+  flex-direction: column;
+  margin-top: 72px;
+  margin-left: 70px;
+}
+
+.box-footer-social > p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.box-footer-social > ul {
+  display: flex;
+  gap: 10px;
+}
+
+.box-footer-social svg {
+  --color3: white;
+  --color4: rgba(255, 255, 255, 0.1);
+}
+
+.box-footer-social svg:hover,
+.box-footer-social:focus {
+  --color4: rgba(33, 150, 243, 1);
+  cursor: pointer;
 }
 
 .footer .nav-webstudio-footer {
@@ -155,6 +185,7 @@ body {
 
 .address {
   margin-top: 20px;
+  font-weight: 400;
 }
 
 .address li {
@@ -191,13 +222,18 @@ body {
   width: 1600px;
   padding: 0px;
   margin: 0px auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(/images/main-foto.jpg);
 }
 
 .main-section {
   margin: 0px auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #2f303a;
   display: flex;
   flex-direction: column;
 }
@@ -239,6 +275,18 @@ body {
   display: flex;
   flex-direction: column;
   width: calc((100% - 90px) / 4);
+}
+.information-flexbox div {
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+.information-flexbox svg {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
 }
 
 .information h3 {
@@ -310,7 +358,7 @@ body {
 }
 
 .team figcaption {
-  margin: 30px auto;
+  margin: 30px auto 0px;
 }
 
 .team span {
@@ -323,6 +371,66 @@ body {
 .team p {
   font-weight: 400px;
   margin: 0px;
+}
+.social-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 12px;
+  margin: 16px auto 18px;
+}
+
+.social-links svg {
+  width: 44px;
+  height: 44px;
+}
+
+.social-links svg:hover,
+.social-links svg:focus {
+  --color3: white;
+  --color4: rgba(33, 150, 243, 1);
+  cursor: pointer;
+}
+
+.customers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customers > h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  margin: 94px auto 50px;
+}
+.customer-box {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 94px;
+}
+
+.customer-box > div {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 16px 31px 13px;
+  width: calc((100% - 150px) / 6);
+}
+
+.customer-box svg {
+  width: 106px;
+  height: 60px;
+}
+
+.customer-box div:hover,
+.customer-box div:focus {
+  border: 1px solid #2196f3;
+  cursor: pointer;
+  --color2: #2196f3;
+  --color1: #2196f3;
 }
 
 /* styles css for file portfolio.html */
@@ -358,7 +466,8 @@ body {
   background-color: #2196f3;
   border: none;
   color: white;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .box-portfolio-fotos {
@@ -374,6 +483,7 @@ body {
 
 .box-portfolio-fotos figure {
   margin: 0px;
+  cursor: pointer;
 }
 figure > img {
   vertical-align: middle;
@@ -389,6 +499,11 @@ figure > img {
   border: solid 1px;
   border-top: none;
   border-color: rgba(238, 238, 238, 1);
+}
+.box-portfolio-fotos figure:hover,
+.box-portfolio-fotos figure:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 figcaption p {
